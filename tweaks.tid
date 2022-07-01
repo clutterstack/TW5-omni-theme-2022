@@ -1,0 +1,7 @@
+title: $:/themes/can/omni_2022/tweaks
+tags: $:/tags/Stylesheet
+
+
+/* Make tiddler titles look normal even though they are links */
+a h2.tc-title { color: <<colour foreground>>; }
+div.tc-titlebar a:hover { text-decoration: none; }

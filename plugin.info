@@ -1,0 +1,11 @@
+{
+	"title": "$:/themes/can/omni_2022",
+	"name": "omni_2022",
+	"author": "Chris Nicoll",
+	"core-version": ">=5.0.0",
+    "version": "0.0.1",
+	"plugin-type": "theme",
+	"description": "Tweaks for wikis using omni plugin",
+    "dependents":  "$:/themes/tiddlywiki/vanilla",
+	"plugin-priority": "1"
+}

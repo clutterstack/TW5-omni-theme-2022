@@ -1,0 +1,4 @@
+
+# Ignore all files named .DS_Store or ending with .code-workspace
+**/.DS_Store
+*.code-workspace
