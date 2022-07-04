@@ -5,6 +5,10 @@ tags: $:/tags/Stylesheet
 <$text text={{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}}/>
 \end
 
+\define sidebarbreakpoint-minus-one()
+<$text text={{{ [{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}removesuffix[px]subtract[1]addsuffix[px]] ~[{$:/themes/tiddlywiki/vanilla/metrics/sidebarbreakpoint}] }}}/>
+\end
+
 \rules only filteredtranscludeinline transcludeinline macrodef macrocallinline macrocallblock
 
 .tc-tiddler-body {
@@ -14,12 +18,16 @@ tags: $:/tags/Stylesheet
 p {margin-top: 0; }
 .tc-tiddler-body p {}
 
-h1, h2, h3, h4 {font-weight: 400;}
+/* Some heading settings (e.g. weight) seem to be overridden by the stock css. Confused. */ 
+
+h1, h2, h3, h4 {font-weight: 500; margin: 1.2em 0 0.8em 0;}
 h5, h6 {font-weight: 500;}
 
-h1 {font-size: 1.7rem;}
-.tc-titlebar {font-size: 1.5rem;}
-h2 {font-size: 1.5rem;}
+
+a h2.tc-title {font-weight: 500; font-size: 1.7rem;} /*to override the link styling from tw*/
+
+h1 {font-size: 1.8rem;}
+h2 {font-size: 1.7rem;}
 h3 {font-size: 1.3rem;}
 h4 {font-size: 1.2rem;}
 h5 {font-size: 1.1rem;}
@@ -184,7 +192,14 @@ p > span > span.tc-tag-label {
     padding: 0 0.6em 0.05em 0.6em;
 }
 
+@media (max-width: <<sidebarbreakpoint-minus-one>>) 
+{
 
+.tc-tiddler-frame {
+    padding: 0 14px;
+}
+
+}
 
 
 @media (min-width: <<sidebarbreakpoint>>) 
@@ -195,11 +210,11 @@ section.story-backdrop  .tc-site-title {
     padding: 0 10px 0.2em 10px;
 }
 .tc-tiddler-frame {
-        padding: 16px 36px 16px 36px;
+        padding: 0 36px;
 	}
 
 .tc-story-river {
-		padding: 42px 0px 16px 32px;
+		padding: 42px 0px 16px 0px;
 	}
 
 .tc-sidebar-tab-open {
