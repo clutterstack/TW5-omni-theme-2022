@@ -52,6 +52,8 @@ external-link-foreground-hover: inherit
 external-link-foreground-visited: <<colour aaa-primary-brighter>>
 external-link-foreground: <<colour primary>>
 foreground: <<colour aaa-fg-dark>>
+menubar-foreground: <<colour foreground>>
+menubar-background: <<colour background>>
 message-background: #ecf2ff
 message-border: #cfd6e6
 message-foreground: #547599
